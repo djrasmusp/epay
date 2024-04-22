@@ -7,7 +7,7 @@ import {useScriptTag} from "@vueuse/core";
 
 const paymentFrame = ref();
 
-const { scriptTag } = useScriptTag(
+useScriptTag(
     '//ssl.ditonlinebetalingssystem.dk/integration/ewindow/paymentwindow.js',
 
     () => {
@@ -19,7 +19,7 @@ const { scriptTag } = useScriptTag(
         'subscription': "1",
         'subscriptiontype': "recurring",
         'subscriptionname': 'My sub',
-        'windowstate': "2",
+        'windowstate': "4",
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
