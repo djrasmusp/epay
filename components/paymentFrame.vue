@@ -19,11 +19,10 @@ const { scriptTag } = useScriptTag(
         'subscription': "1",
         'subscriptiontype': "recurring",
         'subscriptionname': 'My sub',
-        'windowstate': "2",
+        'windowstate': "4",
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
-        'mobile': 2,
         'accepturl': "https://epay.rsmsp.dk/api/createOrder"
       });
       paymentwindow.append('paymentFrame');
