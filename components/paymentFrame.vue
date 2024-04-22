@@ -27,7 +27,7 @@ useScriptTag(
         'ownreceipt': 1,
         'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
         'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css",
-        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/desktop.css",
+        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css",
       })
 
       paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
