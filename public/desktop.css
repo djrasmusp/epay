@@ -1,6 +1,8 @@
 /* Oversigt over standard devices -> http://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
 
-@media only screen and (max-width : 420px) {
+body {
+    background: red;
+}
 
     #epay_content_bottom_content_center
     {
@@ -153,6 +155,3 @@
         background:none;
         color:red;
     }
-
-
-}
