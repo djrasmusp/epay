@@ -24,7 +24,9 @@ const { scriptTag } = useScriptTag(
         'instantcapture': 1,
         'ownreceipt': 1,
         'accepturl': "https://epay.rsmsp.dk/api/createOrder"
-      });
+      })
+      
+      paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
     }
