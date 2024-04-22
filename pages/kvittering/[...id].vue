@@ -1,6 +1,6 @@
 <template>
   <div>
-    WebOrder : {{ orderId }}
+    WebOrder : {{ route }}
   </div>
 </template>
 
