@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Epay payment</h1>
-    <div style="border: 2px solid gray">
+    <div style="border: 2px solid gray; width: 100%">
     <payment-frame />
     </div>
   </div>
