@@ -19,12 +19,12 @@ const { scriptTag } = useScriptTag(
         'subscription': "1",
         'subscriptiontype': "recurring",
         'subscriptionname': 'My sub',
-        'windowstate': "4",
+        'windowstate': "2",
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
         'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
-        'mobilecssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css"
+        'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css"
       })
 
       paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
