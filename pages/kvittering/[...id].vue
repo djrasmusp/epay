@@ -1,6 +1,7 @@
 <template>
   <div>
-    <pre>{{ route }}</pre>
+    <h2>Kvittering</h2>
+    <strong>Weborder</strong>: {{ route.params.id[0] }}
   </div>
 </template>
 
@@ -8,7 +9,6 @@
 import type {RouteLocationNormalizedLoaded} from "vue-router";
 
 const route: RouteLocationNormalizedLoaded = useRoute()
-const orderId = route.query.id
 </script>
 
 <style scoped>
