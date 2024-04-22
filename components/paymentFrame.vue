@@ -23,6 +23,7 @@ const { scriptTag } = useScriptTag(
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
+        'mobile': 2,
         'accepturl': "https://epay.rsmsp.dk/api/createOrder"
       });
       paymentwindow.append('paymentFrame');
