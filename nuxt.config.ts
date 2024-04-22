@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     public : {
-      MerchantNumber: process.env.MERCHANT_NUMBER,
+      merchantNumber: process.env.MERCHANT_NUMBER,
+      siteUrl: process.env.SITE_URL,
     }
   }
 })

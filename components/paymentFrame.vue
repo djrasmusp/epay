@@ -12,7 +12,7 @@ const { scriptTag } = useScriptTag(
 
     () => {
       const paymentwindow = new PaymentWindow({
-        'merchantnumber': useRuntimeConfig().public.MerchantNumber,
+        'merchantnumber': useRuntimeConfig().public.merchantNumber,
         'amount': "500",
         'language': 1,
         'currency': "DKK",
@@ -23,9 +23,10 @@ const { scriptTag } = useScriptTag(
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
-        'accepturl': "https://epay.rsmsp.dk/api/createOrder"
+        'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
+        'mobilecssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css"
       })
-      
+
       paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
