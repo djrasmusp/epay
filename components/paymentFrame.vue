@@ -21,6 +21,7 @@ useScriptTag(
         'subscriptiontype': "recurring",
         'subscriptionname': 'My sub',
         'windowstate': 2,
+        'backgroundcolor:': 'CCC000',
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
