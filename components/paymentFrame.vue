@@ -22,7 +22,7 @@ const { scriptTag } = useScriptTag(
         'paymentcollection': "1",
         'iframeheight': "600",
         'iframewidth': "600",
-        'accepturl': "http://www.epay.dk"
+        'accepturl': "https://epay.rsmsp.dk"
       });
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
