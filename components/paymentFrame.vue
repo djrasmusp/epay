@@ -20,8 +20,7 @@ useScriptTag(
         'subscription': "1",
         'subscriptiontype': "recurring",
         'subscriptionname': 'My sub',
-        'windowstate': 3,
-        'mobile': 2,
+        'windowstate': 2,
         'paymentcollection': "1",
         'instantcapture': 1,
         'ownreceipt': 1,
@@ -36,3 +35,9 @@ useScriptTag(
     }
 )
 </script>
+
+<style scoped>
+:deep(h1) {
+  color: deeppink;
+}
+</style>
