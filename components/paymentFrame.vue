@@ -24,7 +24,8 @@ const { scriptTag } = useScriptTag(
         'instantcapture': 1,
         'ownreceipt': 1,
         'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
-        'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css"
+        'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css",
+        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/desktop.css",
       })
 
       paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
