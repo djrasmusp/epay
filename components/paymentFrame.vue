@@ -27,7 +27,6 @@ useScriptTag(
         'instantcapture': 1,
         'ownreceipt': 1,
         'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
-        /*'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css?v=" + crypto.randomUUID(),*/
         'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + crypto.randomUUID(),
       })
 
