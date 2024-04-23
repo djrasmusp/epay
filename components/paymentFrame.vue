@@ -32,7 +32,7 @@ useScriptTag(
         'ownreceipt': 1,
         //'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
         'accepturl': useRuntimeConfig().public.siteUrl,
-        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + 1234,
+        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
         'hash': hashOrder(),
       })
 
@@ -57,7 +57,7 @@ function hashOrder() : string {
     'instantcapture': 1,
     'ownreceipt': 1,
     'accepturl': useRuntimeConfig().public.siteUrl,
-    'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + 1234,
+    'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
   };
 
   let hashString = "";
