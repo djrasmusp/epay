@@ -7,13 +7,9 @@
 <script setup lang="ts">
 import {useScriptTag} from "@vueuse/core";
 import {useHashEpay} from "~/composables/useHashEpay";
-import type {LocationQuery} from "vue-router";
 
 const paymentFrame = ref();
 const orderId = Math.floor(Math.random() * 99999999)
-
-
-const returnQueries : LocationQuery = useRoute().query
 
 const paymentParameter : Record<string, string | number> = {
   merchantnumber: useRuntimeConfig().public.merchantNumber,
