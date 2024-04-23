@@ -26,7 +26,7 @@ const paymentParameter : Record<string, string | number> = {
   lockpaymentcollection: 1,
   instantcapture: 1,
   ownreceipt: 1,
-  accepturl: useRuntimeConfig().public.siteUrl,
+  accepturl: useRuntimeConfig().public.siteUrl + '/api/createOrder',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
 }
 
