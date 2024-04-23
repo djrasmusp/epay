@@ -26,11 +26,10 @@ useScriptTag(
         'instantcapture': 1,
         'ownreceipt': 1,
         'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
-        'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css",
-        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css",
+        'cssurl' : useRuntimeConfig().public.siteUrl + "/desktop.css?v=" + crypto.randomUUID(),
+        'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + crypto.randomUUID(),
       })
 
-      paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
     }
@@ -38,7 +37,4 @@ useScriptTag(
 </script>
 
 <style scoped>
-:deep(h1) {
-  color: deeppink;
-}
 </style>

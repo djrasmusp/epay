@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background: #EEE">
     <h1>Epay payment</h1>
     {{ useRuntimeConfig().public.siteUrl + "/desktop.css"  }}
     <payment-frame />
