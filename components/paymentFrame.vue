@@ -1,7 +1,7 @@
 <template>
 <div >
   <pre>{{ $route.query.hash }}</pre>
-  <pre>{{ hashValidator(returnQueries) }}</pre>
+  <pre>{{ useHashEpay(returnQueries) }}</pre>
   <pre>{{ returnQueries }}</pre>
 <div ref="paymentFrame" id="paymentFrame"/>
 </div>
@@ -10,28 +10,30 @@
 <script setup lang="ts">
 import {useScriptTag} from "@vueuse/core";
 import { Md5 } from "ts-md5";
+import {useHashEpay} from "~/composables/useHashEpay";
+import type {LocationQuery} from "vue-router";
 
 const paymentFrame = ref();
 const orderId = Math.floor(Math.random() * 99999999)
 
-const returnQueries = useRoute().query
+const returnQueries : LocationQuery = useRoute().query
 
-const paymentParameter = {
-  'merchantnumber': useRuntimeConfig().public.merchantNumber,
-  'amount': 10000,
-  'language': 1,
-  'currency': "DKK",
-  'subscription': 1,
-  'windowstate': 2,
-  'paymentcollection': 1,
-  'lockpaymentcollection': 1,
-  'instantcapture': 1,
-  'ownreceipt': 1,
-  'accepturl': useRuntimeConfig().public.siteUrl,
-  'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
+const paymentParameter : Record<string, string | number> = {
+  merchantnumber: useRuntimeConfig().public.merchantNumber,
+  amount: 10000,
+  language: 1,
+  currency: "DKK",
+  subscription: 1,
+  windowstate: 2,
+  paymentcollection: 1,
+  lockpaymentcollection: 1,
+  instantcapture: 1,
+  ownreceipt: 1,
+  accepturl: useRuntimeConfig().public.siteUrl,
+  mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
 }
 
-paymentParameter.hash = hashOrder(paymentParameter)
+paymentParameter.hash = useHashEpay(paymentParameter)
 
 useScriptTag(
     '//ssl.ditonlinebetalingssystem.dk/integration/ewindow/paymentwindow.js',
@@ -41,33 +43,14 @@ useScriptTag(
 
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
+    },
+    {
+      attrs: {
+        charset : 'UTF-8',
+      }
     }
 )
 
-function hashOrder(parameters) : string {
-
-  let hashString = "";
-  for (const [key, value] of Object.entries(parameters)) {
-    hashString += value
-  }
-
-
-  return Md5.hashStr(hashString + useRuntimeConfig().public.md5key)
-}
-
-function hashValidator(parameters : object) : string {
-  if(parameters?.hash){
-    delete parameters.hash
-  }
-
-  let hashString = "";
-  for (const [key, value] of Object.entries(parameters)) {
-    hashString += value
-  }
-
-
-  return Md5.hashStr(hashString + useRuntimeConfig().public.md5key)
-}
 
 </script>
 
