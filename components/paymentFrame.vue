@@ -1,6 +1,7 @@
 <template>
-
-<div ref="paymentFrame" id="paymentFrame" style="width:100%;" />
+<div >
+<div ref="paymentFrame" id="paymentFrame"/>
+</div>
 </template>
 
 <script setup lang="ts">
@@ -37,4 +38,9 @@ useScriptTag(
 </script>
 
 <style scoped>
+:deep(iframe) {
+  border: pink 1px solid;
+  width: 100%;
+  background: white
+}
 </style>
