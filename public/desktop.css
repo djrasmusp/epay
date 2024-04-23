@@ -1,3 +1,7 @@
+* {
+    outline: red 1px solid;
+}
+
 #epay_content_bottom_content_center
 {
     width:180px;
