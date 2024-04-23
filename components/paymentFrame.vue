@@ -20,7 +20,7 @@ const paymentParameter : Record<string, string | number> = {
   amount: 10000,
   language: 1,
   currency: "DKK",
-  subscription: 1,
+  subscription: 1, // 1 for create, 2 for update
   windowstate: 2,
   paymentcollection: 1,
   lockpaymentcollection: 1,
