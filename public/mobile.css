@@ -4,7 +4,7 @@
 
 /* for testing */
 #epay_testmode_message {
-    display: block;
+    display: none;
 }
 
 #epay_content_bottom_content_center
