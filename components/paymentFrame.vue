@@ -1,20 +1,17 @@
 <template>
 <div >
-  <pre>{{ $route.query.hash }}</pre>
-  <pre>{{ useHashEpay(returnQueries) }}</pre>
-  <pre>{{ returnQueries }}</pre>
 <div ref="paymentFrame" id="paymentFrame"/>
 </div>
 </template>
 
 <script setup lang="ts">
 import {useScriptTag} from "@vueuse/core";
-import { Md5 } from "ts-md5";
 import {useHashEpay} from "~/composables/useHashEpay";
 import type {LocationQuery} from "vue-router";
 
 const paymentFrame = ref();
 const orderId = Math.floor(Math.random() * 99999999)
+
 
 const returnQueries : LocationQuery = useRoute().query
 

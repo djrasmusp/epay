@@ -1,10 +1,12 @@
 export default defineEventHandler(async (event) => {
-    const urlObj = getRequestURL(event)
+    const params : Record<string, string | number> = getQuery(event)
+    const hash = params.hash
 
-
-
-    if(urlObj.searchParams.has('orderid')){
-        const orderId = urlObj.searchParams.get('orderid')
-        await sendRedirect(event, '/kvittering/' + orderId, 301)
+    if(hash !== useHashEpay(params)){
+        throw Error('Invalid Hash')
     }
+
+   await sendRedirect(event, '/kvittering/' + params.orderid, 301)
 })
+
+import {useHashEpay} from "~/composables/useHashEpay";
