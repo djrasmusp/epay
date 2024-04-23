@@ -2,6 +2,11 @@
     outline: red 1px solid;
 }
 
+/* for testing */
+#epay_testmode_message {
+    display: block;
+}
+
 #epay_content_bottom_content_center
 {
     width:180px;
