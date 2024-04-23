@@ -27,7 +27,9 @@ useScriptTag(
         'lockpaymentcollection': 1,
         'instantcapture': 1,
         'ownreceipt': 1,
-        'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
+        'hash': 'abc',
+        //'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
+        'accepturl': useRuntimeConfig().public.siteUrl,
         'mobilecssurl': useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + crypto.randomUUID(),
       })
 
