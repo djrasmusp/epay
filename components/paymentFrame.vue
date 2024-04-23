@@ -18,12 +18,13 @@ useScriptTag(
         'amount': "500",
         'language': 1,
         'currency': "DKK",
-        'subscription': "1",
+        'subscription': 1,
         'subscriptiontype': "recurring",
         'subscriptionname': 'My sub',
         'windowstate': 2,
         'backgroundcolor:': 'A7A7A7',
-        'paymentcollection': "1",
+        'paymentcollection': 1,
+        'lockpaymentcollection': 1,
         'instantcapture': 1,
         'ownreceipt': 1,
         'accepturl': useRuntimeConfig().public.siteUrl + "/api/createOrder",
@@ -38,8 +39,7 @@ useScriptTag(
 
 <style scoped>
 :deep(iframe) {
-  border: pink 1px solid;
   width: 100%;
-  background: white
+  background: white;
 }
 </style>
