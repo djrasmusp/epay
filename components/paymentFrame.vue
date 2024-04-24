@@ -33,7 +33,7 @@ useScriptTag(
     () => {
       const paymentwindow = new PaymentWindow(paymentParameter)
 
-      paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
+      paymentwindow.on('completed', function(params){ console.log('The Payment Window was completed: ' + params); });
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
     },
