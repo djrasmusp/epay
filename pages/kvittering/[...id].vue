@@ -10,6 +10,11 @@
 import type {RouteLocationNormalizedLoaded} from "vue-router";
 
 const orderId: RouteLocationNormalizedLoaded = useRoute().params.id[0]
+
+definePageMeta({
+  middleware: ['test']
+})
+
 </script>
 
 <style scoped>
