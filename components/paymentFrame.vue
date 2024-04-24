@@ -22,7 +22,6 @@ const paymentParameter : Record<string, string | number> = {
   lockpaymentcollection: 1,
   instantcapture: 1,
   ownreceipt: 1,
-  accepturl: useRuntimeConfig().public.siteUrl + '/kvittering',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
 }
 
@@ -34,6 +33,7 @@ useScriptTag(
     () => {
       const paymentwindow = new PaymentWindow(paymentParameter)
 
+      paymentwindow.on('completed', function(params){ alert('The Payment Window was completed: ' + params); });
       paymentwindow.append('paymentFrame');
       paymentwindow.open();
     },
