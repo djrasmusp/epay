@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   ssr: true,
   routeRules: {
     "/": { prerender: true },
-    "/test/client" : { prerender: true }
+    "/test/" : { prerender: true }
   },
   runtimeConfig: {
     public : {
