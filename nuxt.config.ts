@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   routeRules: {
     "/": { prerender: true },
     "/test/client" : {
-      prerender: true,
       experimentalNoScripts: true
     }
   },
