@@ -5,5 +5,5 @@
 </template>
 
 <script setup lang="ts">
-  alert('Hej')
+  console.log('Hej')
 </script>
