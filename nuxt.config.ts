@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
+  routeRules: {
+    "/": { prerender: true },
+  },
   runtimeConfig: {
     public : {
       merchantNumber: process.env.MERCHANT_NUMBER,
