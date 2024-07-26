@@ -1,6 +1,6 @@
 /* for testing */
 #epay_testmode_message {
-    display: none;
+    display: none !important;
 }
 
 #epay_content_bottom_content_center
@@ -153,5 +153,5 @@
     text-align:center;
     background:none;
     color:red;
-    display: none;
+    display: none !important;
 }
