@@ -155,3 +155,7 @@
     color:red;
     display: none !important;
 }
+
+#epay_main #epay_main_content #epay_content_content #epay_testmode_message {
+    display: none !important;
+}
