@@ -25,6 +25,8 @@ const paymentParameter : Record<string, string | number> = {
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
 }
 
+paymentParameter.hash = useHashEpay(paymentParameter)
+
 useScriptTag(
     '//ssl.ditonlinebetalingssystem.dk/integration/ewindow/paymentwindow.js',
 
