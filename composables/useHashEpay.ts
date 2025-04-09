@@ -1,7 +1,7 @@
 import {Md5} from "ts-md5";
 import type {LocationQuery} from "vue-router";
 
-export const useHashEpay = (parameters : Record<string, string | number> | LocationQuery):string => {
+export const useHashEpay = (parameters : Record<string, string | number | Record<string, string | number>> | LocationQuery):string => {
     if(Object.hasOwn(parameters,'hash')){
         delete parameters.hash
     }
