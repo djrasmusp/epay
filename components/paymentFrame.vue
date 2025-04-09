@@ -26,10 +26,9 @@ const paymentParameter : Record<string, string | number | Record<string, string 
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
   phonenumber: '12345678',
   accountinformation: {
-    name: 'test',
-    adress: 'testvej 1',
-    city: 'city ',
-    zipcode: '12345'
+    name: "test",
+    adress: "testvej 1",
+    city: "city ",
   }
 }
 
