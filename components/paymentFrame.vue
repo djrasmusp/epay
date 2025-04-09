@@ -25,11 +25,11 @@ const paymentParameter : Record<string, string | number | Record<string, string 
   cssurl: useRuntimeConfig().public.siteUrl + '/desktop2.css',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
   phonenumber: '12345678',
-  accountinformation: {
+  accountinformation: JSON.stringify({
     name: "test",
     adress: "testvej 1",
-    city: "city ",
-  }
+    city: "city",
+  })
 }
 
 paymentParameter.hash = useHashEpay(paymentParameter)
