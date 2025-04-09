@@ -29,7 +29,8 @@ const paymentParameter : Record<string, string | number | Record<string, string 
     name: "test",
     adress: "testvej 1",
     city: "city",
-    createddate: new Date().toISOString()
+    createddate: new Date().toISOString(),
+    changeddate: new Date().toISOString()
   })
 }
 
