@@ -25,16 +25,6 @@ const paymentParameter : Record<string, string | number | Record<string, string 
   cssurl: useRuntimeConfig().public.siteUrl + '/desktop2.css',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
   phonenumber: '12345678',
-  accountinformation: JSON.stringify({
-    name: "test",
-    adress: "testvej 1",
-    city: "city",
-    createddate: new Date().toISOString(),
-    changeddate: new Date().toISOString(),
-    shippingaddressfirstuseddate: new Date().toISOString(),
-    passwordchangeddate: new Date().toISOString(),
-    paymentaccountcreateddate: new Date().toISOString(),
-  })
 }
 
 paymentParameter.hash = useHashEpay(paymentParameter)
