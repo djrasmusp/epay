@@ -1,4 +1,7 @@
 /* for testing */
+.windowstate_Iframe {
+    background: #FFF;
+}
 #epay_testmode_message {
     display: none !important;
 }

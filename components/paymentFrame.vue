@@ -5,7 +5,6 @@
 </template>
 
 <script setup lang="ts">
-import {useScriptTag} from "@vueuse/core";
 import {useHashEpay} from "~/composables/useHashEpay";
 
 const paymentFrame = ref();
