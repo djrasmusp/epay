@@ -21,7 +21,8 @@ const paymentParameter : Record<string, string | number> = {
   lockpaymentcollection: 1,
   instantcapture: 1,
   ownreceipt: 1,
-  cssurl: useRuntimeConfig().public.siteUrl + '/desktop.css',
+  backgroundcolor: "FFFFFF",
+  //cssurl: useRuntimeConfig().public.siteUrl + '/desktop.css',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
 }
 
