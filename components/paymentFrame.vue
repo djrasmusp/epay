@@ -22,7 +22,7 @@ const paymentParameter : Record<string, string | number> = {
   instantcapture: 1,
   ownreceipt: 1,
   backgroundcolor: "FFFFFF",
-  //cssurl: useRuntimeConfig().public.siteUrl + '/desktop.css',
+  cssurl: useRuntimeConfig().public.siteUrl + '/desktop2.css',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
 }
 
