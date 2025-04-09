@@ -10,7 +10,7 @@ import {useHashEpay} from "~/composables/useHashEpay";
 const paymentFrame = ref();
 const orderId = Math.floor(Math.random() * 99999999)
 
-const paymentParameter : Record<string, string | number> = {
+const paymentParameter : Record<string, string | number | Record<string, string | number>> = {
   merchantnumber: useRuntimeConfig().public.merchantNumber,
   amount: 10000,
   language: 1,
@@ -24,6 +24,13 @@ const paymentParameter : Record<string, string | number> = {
   backgroundcolor: "FFFFFF",
   cssurl: useRuntimeConfig().public.siteUrl + '/desktop2.css',
   mobilecssurl: useRuntimeConfig().public.siteUrl + "/mobile.css?v=" + orderId,
+  phonenumber: '12345678',
+  accountinformation: {
+    name: 'test',
+    adress: 'testvej 1',
+    city: 'city ',
+    zipcode: '12345'
+  }
 }
 
 paymentParameter.hash = useHashEpay(paymentParameter)
